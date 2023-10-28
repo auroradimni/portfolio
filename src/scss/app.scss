@@ -1,0 +1,27 @@
+@import '@/scss/typography/typography';
+@import '@/scss/variables/variables';
+@import '@/scss/functions/functions';
+@import '@/scss/mixins/mixins';
+@import '@/scss/utilities/utilities';
+
+html {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat !important;
+  & body {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+
+    background-color: mapget($colors, 'primary');
+    #app {
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(
+        180deg,
+        mapget($colors, 'primary') 53%,
+        mapget($colors, 'secondary')
+      );
+    }
+  }
+}
