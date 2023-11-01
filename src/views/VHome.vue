@@ -18,7 +18,7 @@ export default {
   >
     <div class="profileholder">
       <div class="about justify-content-between">
-        <h3>About me</h3>
+        <h2 class="color-cream" style="font-family: Sitka Heading">About me</h2>
         <p>
           Welcome to my portfolio! I am a passionate and dedicated individual with a keen interest
           in leveraging technology to create innovative solutions. With a solid foundation in
@@ -30,15 +30,20 @@ export default {
           Explore my portfolio to discover more about my work and professional journey.
         </p>
       </div>
-      <div class="img-holder mar-sm-l">
-        <img class="img mar-sm-l" src="@/assets/profile.jpg" />
-        <h4 class="mar-sm-l">Aurora Dimni</h4>
-        <h5 class="mar-sm-l">Frontend Developer</h5>
+      <div class="img-holder mar-sm-l color-cream">
+        <h3 style="font-family: Sitka Display; letter-spacing: 0.05em" class="mar-sm-l">
+          Aurora Dimni
+        </h3>
+        <img class="img mar-sm-l" src="@/assets/profile.jpeg" />
+
+        <h4 class="" style="font-family: Sitka Display; letter-spacing: 0.05em">
+          Frontend Developer
+        </h4>
       </div>
     </div>
-    <div class="d-flex justify-content-between">
+    <div class="experience d-flex justify-content-between">
       <div>
-        <h3>My experience</h3>
+        <div class="color-cream"><h2 style="font-family: Sitka Heading">My experience</h2></div>
         <ul>
           <li>Freelance Vue.js frontend Developer <b>Upwork</b></li>
           <br />
@@ -53,8 +58,8 @@ export default {
       </div>
       <div class="mar-sm-l">
         <ul>
-          <li>
-            Education <br />
+          <li class="" style="font-family: Sitka Heading">
+            <h2 class="color-cream">Education <br /></h2>
             <p>
               <b>University of Tirana</b> <br />
               Pursuing Business Informatics at Faculty of economy, blending technology and business
@@ -62,46 +67,52 @@ export default {
               ,economics etc.
             </p>
           </li>
-          <li>Certification</li>
+          <li class="color-cream" style="font-family: Sitka Heading">Certification</li>
           <ul class="">
-            <li><a></a></li>
-            <li><a></a></li>
-            <li><a></a></li>
-            <li><a></a></li>
-            <li><a></a></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
           </ul>
         </ul>
       </div>
     </div>
-    <div class="d-grid">
-      <h3>My projects</h3>
-      <div class="projects d-flex justify-content-between mar-xl-l mar-xl-r color-white">
+    <div class="d-grid color-cream">
+      <h3 style="font-family: Sitka Heading">My projects</h3>
+      <div class="projects d-flex justify-content-between mar-xl-l mar-xl-r color-cream">
         <router-link to="/vue" class="color-coral-blue">Vue </router-link>
         <router-link to="/react" class="color-coral-blue">React </router-link> <router-view />
       </div>
     </div>
 
-    <div class="d-grid">
+    <div class="d-grid color-cream">
       <br />
       <br />
-      <h3>Contact me</h3>
-      <div class="d-flex justify-content-between">
-        <font-awesome-icon :icon="['fab', 'github']" />
-        <font-awesome-icon :icon="['fab', 'google']" />
-        <font-awesome-icon :icon="['fab', 'linkedin']" />
+      <div class="color-cream"><h3 style="font-family: Sitka Heading">Contact me</h3></div>
+      <div class="social-media d-flex justify-content-between">
+        <a href=""><font-awesome-icon :icon="['fab', 'github']" class="github color-white" /></a>
+        <a href=""><font-awesome-icon :icon="['fab', 'google']" class="google color-white" /></a>
+        <a href="">
+          <font-awesome-icon :icon="['fab', 'linkedin']" class="linkedin color-white"
+        /></a>
       </div>
+    </div>
+    <div class="justify-content-center d-flex mar-sm color-cream">
+      <h1 style="font-family: Segoe UI" class="">LETS WORK TOGERTHER</h1>
     </div>
   </div>
 </template>
 
 <style lang="scss">
 .main {
+  font-family: 'Segoe UI';
   overflow-y: scroll;
   position: absolute;
   max-width: 100%;
   max-height: 100%;
   z-index: 3;
-  // background: rgba($color: #000000, $alpha: 0.01);
+  background: rgba($color: #000000, $alpha: 0.1);
   box-shadow: 1px 1px 5px 1px mapget($colors, 'coral-blue');
   right: 0;
   left: 0;
@@ -110,7 +121,6 @@ export default {
   //display: grid;
 }
 .profileholder {
-  //overflow: hidden;
   display: flex;
 }
 
@@ -122,5 +132,40 @@ img {
   &:hover {
     color: mapget($colors, 'hover');
   }
+}
+@media screen and (max-width: breakpointValue(sm)) {
+  .profileholder {
+    flex-direction: column-reverse;
+  }
+  .experience {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+  }
+  .hobbies-container {
+    flex-direction: column-reverse;
+    display: grid;
+    gap: 20px;
+  }
+}
+.hobby-item {
+  border-radius: 50%;
+}
+::-webkit-scrollbar {
+  width: 13px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 3px mapget($colors, 'cream');
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: mapget($colors, 'secondary');
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: mapget($colors, 'primary');
 }
 </style>
