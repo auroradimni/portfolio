@@ -5,23 +5,30 @@
 @import '@/scss/utilities/utilities';
 
 html {
+  overflow: hidden;
+  position: absolute;
   width: 100%;
   height: 100%;
   background-repeat: no-repeat !important;
   & body {
+    position: absolute;
+
     overflow: hidden;
     width: 100%;
     height: 100%;
 
     background-color: mapget($colors, 'primary');
-    #app {
-      width: 100%;
-      height: 100%;
-      background-image: linear-gradient(
-        180deg,
-        mapget($colors, 'primary') 53%,
-        mapget($colors, 'secondary')
-      );
-    }
+  }
+  #app {
+    background-repeat: no-repeat !important;
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(
+      190deg,
+      mapget($colors, 'primary') 53%,
+      mapget($colors, 'secondary')
+    );
   }
 }

@@ -32,8 +32,7 @@ export default {
 </script>
 <style>
 #particles {
-  z-index: 1;
-  position: relative;
+  position: absolute;
   width: 100%;
   height: 100%;
 }

@@ -4,13 +4,12 @@
 
 <script lang="ts">
 import ParticlesComponent from './components/ParticlesComponent.vue'
-import VHome from './views/VHome.vue'
+import { RouterView } from 'vue-router'
 
 export default {
   name: 'App',
   components: {
-    ParticlesComponent,
-    VHome
+    ParticlesComponent
   }
 }
 </script>
@@ -18,5 +17,4 @@ export default {
 <template>
   <router-view />
   <ParticlesComponent />
-  <VHome />
 </template>

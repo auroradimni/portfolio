@@ -1,6 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import PageNotFound from '@/views/PageNotFound.vue'
 import VHome from '@/views/VHome.vue'
+import React from '@/views/VReact.vue'
+import Vue from '@/views/Vvue.vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -11,6 +13,16 @@ const router = createRouter({
     {
       path: '/:catchAll(.*)', // Unrecognized path automatically matches 404
       redirect: '/404'
+    },
+    {
+      path: '/React',
+      name: 'React',
+      component: React
+    },
+    {
+      path: '/Vue',
+      name: 'Vue',
+      component: Vue
     }
   ]
 })
