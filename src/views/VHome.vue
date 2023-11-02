@@ -1,10 +1,10 @@
 <script lang="ts">
-import { createApp } from 'vue'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
+import { fas } from '@fortawesome/free-solid-svg-icons'
 
-library.add(fab)
+library.add(fab, fas)
 export default {
   name: 'VHome',
   components: {
@@ -20,66 +20,124 @@ export default {
       <div class="about justify-content-between">
         <h2 class="color-cream" style="font-family: Sitka Heading">About me</h2>
         <p>
-          Welcome to my portfolio! I am a passionate and dedicated individual with a keen interest
-          in leveraging technology to create innovative solutions. With a solid foundation in
-          various programming languages and a flair for creative problem-solving, I strive to
-          develop user-friendly applications that deliver seamless and enriching experiences. My
-          journey in the world of technology has equipped me with valuable skills in web
-          development, software engineering, and beyond. I am committed to continuous learning and
-          growth, and I am excited to contribute my skills to projects that make a positive impact.
-          Explore my portfolio to discover more about my work and professional journey.
+          💻 Welcome to my portfolio! I'm a passionate and dedicated tech enthusiast, eager to
+          leverage the latest innovations for creative solutions. With a diverse skill set in
+          various programming languages and a knack for inventive problem-solving, I aim to craft
+          user-friendly applications that offer seamless and enriching experiences. <br />🚀 My tech
+          journey has equipped me with valuable skills in web development, software engineering, and
+          more. I'm dedicated to continuous learning and growth, excited to contribute to projects
+          that create a positive impact.<br />
+          🌟 Dive into my portfolio to explore more about my work and professional journey!
+        </p>
+        <p>
+          🌟 Innovation: Passionate about creative problem-solving and pushing boundaries in
+          tech.<br />
+          🤝 Collaboration: Thrive in team environments, fostering open communication and collective
+          success. As a seasoned Frontend Developer, I've contributed to diverse projects, ensuring
+          seamless collaboration across teams and delivering top-notch user experiences. Let's
+          connect via auroradimnid.com or on LinkedIn to discuss collaboration opportunities.
+          Looking forward to contributing to your team's success!
         </p>
       </div>
       <div class="img-holder mar-sm-l color-cream">
-        <h3 style="font-family: Sitka Display; letter-spacing: 0.05em" class="mar-sm-l">
-          Aurora Dimni
-        </h3>
+        <h3 class="name mar-sm-l font-family-sd">Aurora Dimni</h3>
         <img class="img mar-sm-l" src="@/assets/profile.jpeg" />
 
-        <h4 class="" style="font-family: Sitka Display; letter-spacing: 0.05em">
-          Frontend Developer
-        </h4>
+        <div class="d-flex justify-content-between">
+          <h4 class="font-family-sd">Frontend Developer</h4>
+        </div>
       </div>
     </div>
     <div class="experience d-flex justify-content-between">
       <div>
-        <div class="color-cream"><h2 style="font-family: Sitka Heading">My experience</h2></div>
+        <div class="color-cream font-family-sh d-grid"><h2>My experience</h2></div>
         <ul>
-          <li>Freelance Vue.js frontend Developer <b>Upwork</b></li>
-          <br />
-          <p>
-            As a Vue.js Frontend Developer on Upwork, I specialize in creating elegant and efficient
-            user interfaces. With a passion for clean, maintainable code and a keen eye for design,
-            I build web applications that captivate users and drive engagement. Harness the power of
-            Vue.js with me to enhance your digital presence and deliver exceptional user
-            experiences.
-          </p>
+          <div class="d-flex">
+            <font-awesome-icon :icon="['fas', 'code']" class="color-coral-blue mar-sm-r" />
+            Freelance Vue.js frontend Developer
+            <b class="mar-sm-l">Upwork</b>
+            <br />
+          </div>
+
+          <li>
+            <p>
+              As a Vue.js Frontend Developer on Upwork, I specialize in creating elegant and
+              efficient user interfaces. With a passion for clean, maintainable code and a keen eye
+              for design, I build web applications that captivate users and drive engagement.
+              Harness the power of Vue.js with me to enhance your digital presence and deliver
+              exceptional user experiences.
+            </p>
+          </li>
+          <div class="skills-holder">
+            <h3 class="color-cream font-family-sh">Skills</h3>
+            <li class="skills">
+              HTML5 CSS3 Git GitHub Javascript TypeScript C++ Bootstrap Vue.js MySQL SASS(SCSS)
+              Responsive Web development Java Object-Oriented Programming (OOP) React
+            </li>
+          </div>
         </ul>
       </div>
       <div class="mar-sm-l">
         <ul>
-          <li class="" style="font-family: Sitka Heading">
-            <h2 class="color-cream">Education <br /></h2>
-            <p>
+          <div class="font-family-sh">
+            <div class="d-flex">
+              <h2 class="color-cream">Education <br /></h2>
+              <font-awesome-icon
+                :icon="['fas', 'school']"
+                class="color-coral-blue mar-sm-l mar-lg-t"
+              />
+            </div>
+
+            <li>
               <b>University of Tirana</b> <br />
-              Pursuing Business Informatics at Faculty of economy, blending technology and business
-              for a dynamic skill set including Algorithms ,Data structure, SQL , C++, marketing
-              ,economics etc.
-            </p>
-          </li>
-          <li class="color-cream" style="font-family: Sitka Heading">Certification</li>
-          <ul class="">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+              <p>
+                Pursuing Business Informatics at Faculty of Economy, blending technology and
+                business for a dynamic skill set.
+              </p>
+            </li>
+          </div>
+
+          <li class="color-cream font-family-sh gap-2px">Certification</li>
+          <ul class="certification">
+            <li>
+              <a
+                class="link text-dec-none color-cream"
+                href="https://www.credly.com/badges/ff762df1-dab3-4882-9ac6-b5757e2aceee/public_url"
+              >
+                JavaScript Essentials 1 <b>Cisco</b></a
+              >
+            </li>
+            <li>
+              <a
+                class="link text-dec-none color-cream"
+                href="https://verify.mygreatlearning.com/verify/LQFBAGQG"
+              >
+                JavaScript Projects
+                <b>Great Learning</b>
+              </a>
+            </li>
+            <li>
+              <a
+                class="link text-dec-none color-cream"
+                href="https://www.linkedin.com/learning/certificates/499759501b641e94448b235e5c2b2b9544c2482607f06f936180f9b9dd27c841"
+              >
+                JavaScript Essential Training <b>LinkedIn Learning</b></a
+              >
+            </li>
+            <li>
+              <a
+                class="link text-dec-none color-cream"
+                href="https://www.linkedin.com/learning/certificates/a775b16219f1173621a5563f273721197fb962f25af5f4a67b696f536a8ba334"
+              >
+                Python Essential Training <b>LinkedIn Learning</b></a
+              >
+            </li>
           </ul>
         </ul>
       </div>
     </div>
     <div class="d-grid color-cream">
-      <h3 style="font-family: Sitka Heading">My projects</h3>
+      <h3 class="font-family-sh">My projects</h3>
       <div class="projects d-flex justify-content-between mar-xl-l mar-xl-r color-cream">
         <router-link to="/vue" class="color-coral-blue">Vue </router-link>
         <router-link to="/react" class="color-coral-blue">React </router-link> <router-view />
@@ -89,17 +147,23 @@ export default {
     <div class="d-grid color-cream">
       <br />
       <br />
-      <div class="color-cream"><h3 style="font-family: Sitka Heading">Contact me</h3></div>
+      <div class="color-cream font-family-sh"><h3>Contact me</h3></div>
       <div class="social-media d-flex justify-content-between">
-        <a href=""><font-awesome-icon :icon="['fab', 'github']" class="github color-white" /></a>
-        <a href=""><font-awesome-icon :icon="['fab', 'google']" class="google color-white" /></a>
-        <a href="">
-          <font-awesome-icon :icon="['fab', 'linkedin']" class="linkedin color-white"
+        <a href="https://github.com/auroradimni"
+          ><font-awesome-icon :icon="['fab', 'github']" class="social color-white"
+        /></a>
+
+        <div>
+          <font-awesome-icon :icon="['fas', 'envelope']" class="social color-white" />
+          <span class="mar-sm-l"> auroradimnid@gmail.com </span>
+        </div>
+        <a href="https://www.linkedin.com/in/aurora-dimni-4038ba225/?originalSubdomain=al">
+          <font-awesome-icon :icon="['fab', 'linkedin']" class="social color-white"
         /></a>
       </div>
     </div>
     <div class="justify-content-center d-flex mar-sm color-cream">
-      <h1 style="font-family: Segoe UI" class="">LETS WORK TOGERTHER</h1>
+      <h2 class="font-family-su">LET'S WORK TOGERTHER</h2>
     </div>
   </div>
 </template>
@@ -118,7 +182,6 @@ export default {
   left: 0;
   bottom: 0;
   top: 0;
-  //display: grid;
 }
 .profileholder {
   display: flex;
@@ -129,8 +192,12 @@ img {
   max-height: 150px;
 }
 .projects {
-  &:hover {
-    color: mapget($colors, 'hover');
+  a {
+    text-decoration: none;
+    &:hover {
+      color: mapget($colors, 'secondary') !important;
+      transform: scale(1.2);
+    }
   }
 }
 @media screen and (max-width: breakpointValue(sm)) {
@@ -142,15 +209,8 @@ img {
     grid-template-columns: 1fr;
     grid-gap: 20px;
   }
-  .hobbies-container {
-    flex-direction: column-reverse;
-    display: grid;
-    gap: 20px;
-  }
 }
-.hobby-item {
-  border-radius: 50%;
-}
+
 ::-webkit-scrollbar {
   width: 13px;
 }
@@ -167,5 +227,15 @@ img {
 
 ::-webkit-scrollbar-thumb:hover {
   background: mapget($colors, 'primary');
+}
+.link {
+  :hover {
+    color: mapget($colors, 'secondary') !important;
+  }
+}
+.social {
+  :hover {
+    transform: scale(1.2);
+  }
 }
 </style>
